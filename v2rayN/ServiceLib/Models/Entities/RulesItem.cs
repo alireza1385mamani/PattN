@@ -16,4 +16,6 @@ public class RulesItem
     public bool Enabled { get; set; } = true;
     public string? Remarks { get; set; }
     public ERuleType? RuleType { get; set; }
+
+    public override string ToString() => Remarks ?? OutboundTag ?? string.Empty;
 }

@@ -87,6 +87,7 @@
                     Grid.Column="1"
                     Width="400"
                     Margin="{StaticResource Margin4}"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbRemarks}"
                     Style="{StaticResource DefTextBox}" />
 
                 <TextBlock
@@ -102,6 +103,7 @@
                     Grid.Column="1"
                     Width="200"
                     Margin="{StaticResource Margin4}"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbCoreType}"
                     materialDesign:HintAssist.Hint="{x:Static resx:ResUI.TbCoreType}"
                     Style="{StaticResource DefComboBox}" />
 
@@ -128,6 +130,7 @@
                         Grid.Column="1"
                         Width="200"
                         Margin="{StaticResource Margin4}"
+                        AutomationProperties.Name="{x:Static resx:ResUI.TbPolicyGroupType}"
                         materialDesign:HintAssist.Hint="{x:Static resx:ResUI.TbPolicyGroupType}"
                         Style="{StaticResource DefComboBox}" />
                 </Grid>
@@ -165,6 +168,7 @@
                         Grid.Column="1"
                         Width="600"
                         Margin="{StaticResource Margin4}"
+                        AutomationProperties.Name="{x:Static resx:ResUI.menuSubscription}"
                         DisplayMemberPath="Remarks"
                         Style="{StaticResource DefComboBox}" />
                     <TextBlock
@@ -190,6 +194,7 @@
                         Width="600"
                         Margin="{StaticResource Margin4}"
                         VerticalAlignment="Center"
+                        AutomationProperties.Name="{x:Static resx:ResUI.LvFilter}"
                         IsEditable="True"
                         Style="{StaticResource DefComboBox}" />
                 </Grid>
@@ -199,6 +204,7 @@
                 <DataGrid
                     x:Name="lstChild"
                     AutoGenerateColumns="False"
+                    AutomationProperties.Name="{x:Static resx:ResUI.menuServerList2}"
                     BorderThickness="1"
                     CanUserAddRows="False"
                     CanUserResizeRows="False"
@@ -208,6 +214,11 @@
                     HeadersVisibility="Column"
                     IsReadOnly="True"
                     Style="{StaticResource DefDataGrid}">
+                    <DataGrid.ItemContainerStyle>
+                        <Style BasedOn="{StaticResource MaterialDesignDataGridRow}" TargetType="DataGridRow">
+                            <Setter Property="AutomationProperties.Name" Value="{Binding Remarks}" />
+                        </Style>
+                    </DataGrid.ItemContainerStyle>
                     <DataGrid.ContextMenu>
                         <ContextMenu Style="{StaticResource DefContextMenu}">
                             <MenuItem
@@ -278,6 +289,7 @@
                 <DataGrid
                     x:Name="lstPreviewChild"
                     AutoGenerateColumns="False"
+                    AutomationProperties.Name="{x:Static resx:ResUI.menuServerListPreview}"
                     BorderThickness="1"
                     CanUserAddRows="False"
                     CanUserResizeRows="False"
@@ -287,6 +299,11 @@
                     HeadersVisibility="Column"
                     IsReadOnly="True"
                     Style="{StaticResource DefDataGrid}">
+                    <DataGrid.ItemContainerStyle>
+                        <Style BasedOn="{StaticResource MaterialDesignDataGridRow}" TargetType="DataGridRow">
+                            <Setter Property="AutomationProperties.Name" Value="{Binding Remarks}" />
+                        </Style>
+                    </DataGrid.ItemContainerStyle>
                     <DataGrid.Columns>
                         <DataGridTextColumn
                             Width="150"

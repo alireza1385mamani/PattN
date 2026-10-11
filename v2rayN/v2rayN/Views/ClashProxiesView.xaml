@@ -36,6 +36,7 @@
                 x:Name="cmbRulemode"
                 Width="100"
                 Margin="{StaticResource MarginLeftRight8}"
+                AutomationProperties.Name="{x:Static resx:ResUI.menuRulemode}"
                 Style="{StaticResource DefComboBox}">
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
@@ -53,6 +54,7 @@
                 x:Name="cmbSorting"
                 Width="100"
                 Margin="{StaticResource MarginLeftRight8}"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbSorting}"
                 Style="{StaticResource DefComboBox}">
                 <ComboBoxItem Content="{x:Static resx:ResUI.TbSortingDelay}" />
                 <ComboBoxItem Content="{x:Static resx:ResUI.TbSortingName}" />
@@ -64,6 +66,7 @@
                 Width="24"
                 Height="24"
                 Margin="{StaticResource MarginLeftRight8}"
+                AutomationProperties.Name="{x:Static resx:ResUI.menuProxiesReload}"
                 Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
                 ToolTip="{x:Static resx:ResUI.menuProxiesReload}">
                 <materialDesign:PackIcon VerticalAlignment="Center" Kind="Reload" />
@@ -74,6 +77,7 @@
                 Width="24"
                 Height="24"
                 Margin="{StaticResource MarginLeftRight8}"
+                AutomationProperties.Name="{x:Static resx:ResUI.menuDelaytest}"
                 Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
                 ToolTip="{x:Static resx:ResUI.menuDelaytest}">
                 <materialDesign:PackIcon VerticalAlignment="Center" Kind="LightningBolt" />
@@ -87,12 +91,14 @@
             <ToggleButton
                 x:Name="togAutoRefresh"
                 Margin="{StaticResource MarginLeftRight8}"
-                HorizontalAlignment="Left" />
+                HorizontalAlignment="Left"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbAutoRefresh}" />
         </WrapPanel>
         <DockPanel>
             <ListView
                 x:Name="lstProxyGroups"
                 Margin="{StaticResource MarginRight8}"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbProxies}"
                 BorderThickness="0"
                 DockPanel.Dock="Left"
                 ItemContainerStyle="{StaticResource lvItemSelected}"
@@ -136,6 +142,7 @@
 
             <ListView
                 x:Name="lstProxyDetails"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbProxies}"
                 BorderThickness="0"
                 ItemContainerStyle="{StaticResource lvItemSelected}"
                 ScrollViewer.HorizontalScrollBarVisibility="Disabled"

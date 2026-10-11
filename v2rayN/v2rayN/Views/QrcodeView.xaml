@@ -27,6 +27,7 @@
                 Grid.Row="0"
                 Width="{StaticResource QrcodeWidth}"
                 Height="{StaticResource QrcodeWidth}"
+                AutomationProperties.Name="{x:Static resx:ResUI.menuShareServer}"
                 Stretch="UniformToFill" />
 
             <TextBox
@@ -35,6 +36,7 @@
                 Width="{StaticResource QrcodeWidth}"
                 Margin="0,8"
                 VerticalAlignment="Center"
+                AutomationProperties.Name="{x:Static resx:ResUI.menuShareServer}"
                 IsReadOnly="True"
                 MaxLines="3"
                 TextWrapping="Wrap"

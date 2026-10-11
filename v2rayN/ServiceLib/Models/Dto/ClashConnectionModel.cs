@@ -14,4 +14,6 @@ public class ClashConnectionModel
     public string? Elapsed { get; set; }
     public string? Chain { get; set; }
     public string? ProcessPath { get; set; }
+
+    public override string ToString() => Host ?? string.Empty;
 }

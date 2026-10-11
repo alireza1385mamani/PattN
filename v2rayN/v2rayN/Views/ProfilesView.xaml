@@ -84,6 +84,7 @@
                     Width="30"
                     Height="30"
                     Margin="{StaticResource MarginLeftRight4}"
+                    AutomationProperties.Name="{x:Static resx:ResUI.menuFastRealPing}"
                     Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
                     ToolTip="{x:Static resx:ResUI.menuFastRealPing}">
                     <materialDesign:PackIcon VerticalAlignment="Center" Kind="LightningBolt" />
@@ -93,6 +94,7 @@
                     Width="30"
                     Height="30"
                     Margin="{StaticResource MarginLeftRight4}"
+                    AutomationProperties.Name="{x:Static resx:ResUI.menuMixedTestServer}"
                     Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
                     ToolTip="{x:Static resx:ResUI.menuMixedTestServer}">
                     <materialDesign:PackIcon VerticalAlignment="Center" Kind="Speedometer" />
@@ -100,6 +102,7 @@
             </WrapPanel>
             <DataGrid
                 x:Name="lstProfiles"
+                AutomationProperties.Name="{x:Static resx:ResUI.menuServers}"
                 materialDesign:DataGridAssist.CellPadding="2,2"
                 AutoGenerateColumns="False"
                 BorderThickness="1"
@@ -177,13 +180,14 @@
                             x:Name="menuMoveToGroup"
                             Height="{StaticResource MenuItemHeight}"
                             Header="{x:Static resx:ResUI.menuMoveToGroup}">
-                            <MenuItem Height="Auto">
+                            <MenuItem Height="Auto" AutomationProperties.Name="{x:Static resx:ResUI.menuSubscription}">
                                 <MenuItem.Header>
                                     <DockPanel>
                                         <ComboBox
                                             x:Name="cmbMoveToGroup"
                                             Width="200"
                                             materialDesign:HintAssist.Hint="{x:Static resx:ResUI.menuSubscription}"
+                                            AutomationProperties.Name="{x:Static resx:ResUI.menuSubscription}"
                                             DisplayMemberPath="Remarks"
                                             FontSize="{DynamicResource StdFontSize}"
                                             Style="{StaticResource MaterialDesignFilledComboBox}" />
@@ -263,6 +267,7 @@
                 </DataGrid.ContextMenu>
                 <DataGrid.Resources>
                     <Style BasedOn="{StaticResource MaterialDesignDataGridRow}" TargetType="DataGridRow">
+                        <Setter Property="AutomationProperties.Name" Value="{Binding Remarks}" />
                         <EventSetter Event="MouseDoubleClick" Handler="LstProfiles_MouseDoubleClick" />
                     </Style>
                     <Style BasedOn="{StaticResource MaterialDesignDataGridColumnHeader}" TargetType="DataGridColumnHeader">

@@ -48,6 +48,7 @@
                 Width="200"
                 Margin="{StaticResource Margin4}"
                 HorizontalAlignment="Left"
+                AutomationProperties.Name="{x:Static resx:ResUI.LvRemarks}"
                 Style="{StaticResource DefTextBox}" />
             <StackPanel
                 Grid.Row="0"
@@ -60,7 +61,8 @@
                     x:Name="togEnabled"
                     Margin="{StaticResource Margin4}"
                     HorizontalAlignment="Left"
-                    VerticalAlignment="Center" />
+                    VerticalAlignment="Center"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvEnabled}" />
             </StackPanel>
 
             <TextBlock
@@ -77,6 +79,7 @@
                 Width="200"
                 Margin="{StaticResource Margin4}"
                 MaxDropDownHeight="1000"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbRuleType}"
                 Style="{StaticResource DefComboBox}" />
             <TextBlock
                 Grid.Row="1"
@@ -102,6 +105,7 @@
                 Margin="{StaticResource Margin4}"
                 IsEditable="True"
                 MaxDropDownHeight="1000"
+                AutomationProperties.Name="outboundTag"
                 Style="{StaticResource DefComboBox}" />
             <StackPanel
                 Grid.Row="2"
@@ -136,6 +140,7 @@
                 Width="200"
                 Margin="{StaticResource Margin4}"
                 HorizontalAlignment="Left"
+                AutomationProperties.Name="port"
                 Style="{StaticResource DefTextBox}" />
             <TextBlock
                 Grid.Row="3"
@@ -159,6 +164,7 @@
                 Grid.Column="1"
                 Margin="{StaticResource Margin4}"
                 HorizontalAlignment="Left"
+                AutomationProperties.Name="protocol"
                 FontSize="{DynamicResource StdFontSize}"
                 Style="{StaticResource MaterialDesignFilterChipPrimaryListBox}" />
             <TextBlock
@@ -185,6 +191,8 @@
                 Grid.Row="5"
                 Grid.Column="1"
                 Margin="{StaticResource Margin4}"
+                HorizontalAlignment="Left"
+                AutomationProperties.Name="inboundTag"
                 FontSize="{DynamicResource StdFontSize}"
                 Style="{StaticResource MaterialDesignFilterChipPrimaryListBox}" />
             <TextBlock
@@ -210,6 +218,7 @@
                 Width="200"
                 Margin="{StaticResource Margin4}"
                 MaxDropDownHeight="1000"
+                AutomationProperties.Name="network"
                 Style="{StaticResource DefComboBox}" />
 
             <TextBlock
@@ -231,7 +240,7 @@
                 Width="600"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center">
-                <CheckBox x:Name="chkAutoSort">
+                <CheckBox x:Name="chkAutoSort" AutomationProperties.Name="{x:Static resx:ResUI.TbAutoSort}">
                     <TextBlock Style="{StaticResource ToolbarTextBlock}" Text="{x:Static resx:ResUI.TbAutoSort}" />
                 </CheckBox>
             </StackPanel>
@@ -265,6 +274,7 @@
                 <TextBox
                     Name="txtDomain"
                     AcceptsReturn="True"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbRoutingRuleDomain}"
                     Style="{StaticResource DefTextBox}"
                     TextWrapping="Wrap"
                     VerticalScrollBarVisibility="Auto" />
@@ -277,6 +287,7 @@
                 <TextBox
                     Name="txtIP"
                     AcceptsReturn="True"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbRoutingRuleIP}"
                     Style="{StaticResource DefTextBox}"
                     TextWrapping="Wrap"
                     VerticalScrollBarVisibility="Auto" />
@@ -289,6 +300,7 @@
                 <TextBox
                     Name="txtProcess"
                     AcceptsReturn="True"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbRoutingRuleProcess}"
                     Style="{StaticResource DefTextBox}"
                     TextWrapping="Wrap"
                     VerticalScrollBarVisibility="Auto" />

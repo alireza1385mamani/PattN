@@ -11,4 +11,6 @@ public class ComboItem
     {
         get; set;
     }
+
+    public override string ToString() => Text ?? string.Empty;
 }

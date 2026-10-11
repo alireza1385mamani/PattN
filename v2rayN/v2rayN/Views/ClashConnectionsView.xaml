@@ -26,15 +26,18 @@
                 Width="200"
                 Margin="{StaticResource MarginLeftRight8}"
                 VerticalContentAlignment="Center"
+                AutomationProperties.Name="{x:Static resx:ResUI.ConnectionsHostFilterTitle}"
                 materialDesign:HintAssist.Hint="{x:Static resx:ResUI.ConnectionsHostFilterTitle}"
                 materialDesign:TextFieldAssist.HasClearButton="True"
-                Style="{StaticResource DefTextBox}" />
+                Style="{StaticResource DefTextBox}"
+                ToolTip="{x:Static resx:ResUI.ConnectionsHostFilterTitle}" />
 
             <Button
                 x:Name="btnConnectionCloseAll"
                 Width="24"
                 Height="24"
                 Margin="{StaticResource MarginLeftRight8}"
+                AutomationProperties.Name="{x:Static resx:ResUI.menuConnectionCloseAll}"
                 Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
                 ToolTip="{x:Static resx:ResUI.menuConnectionCloseAll}">
                 <materialDesign:PackIcon VerticalAlignment="Center" Kind="Close" />
@@ -45,6 +48,7 @@
                 Width="24"
                 Height="24"
                 Margin="{StaticResource MarginLeftRight8}"
+                AutomationProperties.Name="{x:Static resx:ResUI.menuProfileAutofitColumnWidth}"
                 Style="{StaticResource MaterialDesignFloatingActionMiniLightButton}"
                 ToolTip="{x:Static resx:ResUI.menuProfileAutofitColumnWidth}">
                 <materialDesign:PackIcon VerticalAlignment="Center" Kind="ArrowSplitVertical" />
@@ -58,12 +62,14 @@
             <ToggleButton
                 x:Name="togAutoRefresh"
                 Margin="{StaticResource MarginLeftRight8}"
-                HorizontalAlignment="Left" />
+                HorizontalAlignment="Left"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbAutoRefresh}" />
         </WrapPanel>
 
         <DataGrid
             x:Name="lstConnections"
             AutoGenerateColumns="False"
+            AutomationProperties.Name="{x:Static resx:ResUI.TbConnections}"
             BorderThickness="1"
             CanUserAddRows="False"
             CanUserResizeRows="False"
@@ -72,6 +78,11 @@
             HeadersVisibility="Column"
             IsReadOnly="True"
             Style="{StaticResource DefDataGrid}">
+            <DataGrid.ItemContainerStyle>
+                <Style BasedOn="{StaticResource MaterialDesignDataGridRow}" TargetType="DataGridRow">
+                    <Setter Property="AutomationProperties.Name" Value="{Binding Host}" />
+                </Style>
+            </DataGrid.ItemContainerStyle>
             <DataGrid.ContextMenu>
                 <ContextMenu Style="{StaticResource DefContextMenu}">
                     <MenuItem x:Name="menuConnectionClose" Header="{x:Static resx:ResUI.menuConnectionClose}" />

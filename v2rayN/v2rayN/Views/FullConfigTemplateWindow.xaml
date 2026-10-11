@@ -76,7 +76,8 @@
                             <ToggleButton
                                 x:Name="rayFullConfigTemplateEnable"
                                 Margin="{StaticResource Margin8}"
-                                HorizontalAlignment="Left" />
+                                HorizontalAlignment="Left"
+                                AutomationProperties.Name="{x:Static resx:ResUI.TbFullConfigTemplateEnable}" />
                         </StackPanel>
                     </Grid>
 
@@ -90,7 +91,8 @@
                             <ToggleButton
                                 x:Name="togAddProxyProtocolOutboundOnly4Ray"
                                 Margin="{StaticResource Margin8}"
-                                HorizontalAlignment="Left" />
+                                HorizontalAlignment="Left"
+                                AutomationProperties.Name="{x:Static resx:ResUI.TbAddProxyProtocolOutboundOnly}" />
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
@@ -103,6 +105,7 @@
                                 x:Name="txtProxyDetour4Ray"
                                 Width="200"
                                 Margin="{StaticResource Margin8}"
+                                AutomationProperties.Name="{x:Static resx:ResUI.TbSetUpstreamProxyDetour}"
                                 Style="{StaticResource DefTextBox}" />
                         </StackPanel>
                     </WrapPanel>
@@ -118,6 +121,7 @@
                             x:Name="rayFullConfigTemplate"
                             Grid.Column="0"
                             VerticalAlignment="Stretch"
+                            AutomationProperties.Name="xray config template json"
                             materialDesign:HintAssist.Hint="xray config template json"
                             AcceptsReturn="True"
                             BorderThickness="1"
@@ -131,6 +135,7 @@
                             x:Name="rayFullTunConfigTemplate"
                             Grid.Column="2"
                             VerticalAlignment="Stretch"
+                            AutomationProperties.Name="xray tun config template json"
                             materialDesign:HintAssist.Hint="xray tun config template json"
                             AcceptsReturn="True"
                             BorderThickness="1"
@@ -177,7 +182,8 @@
                             <ToggleButton
                                 x:Name="sbFullConfigTemplateEnable"
                                 Margin="{StaticResource Margin8}"
-                                HorizontalAlignment="Left" />
+                                HorizontalAlignment="Left"
+                                AutomationProperties.Name="{x:Static resx:ResUI.TbFullConfigTemplateEnable}" />
                         </StackPanel>
                     </Grid>
 
@@ -191,7 +197,8 @@
                             <ToggleButton
                                 x:Name="togAddProxyProtocolOutboundOnly4Singbox"
                                 Margin="{StaticResource Margin8}"
-                                HorizontalAlignment="Left" />
+                                HorizontalAlignment="Left"
+                                AutomationProperties.Name="{x:Static resx:ResUI.TbAddProxyProtocolOutboundOnly}" />
                         </StackPanel>
 
                         <StackPanel Orientation="Horizontal">
@@ -204,6 +211,7 @@
                                 x:Name="txtProxyDetour4Singbox"
                                 Width="200"
                                 Margin="{StaticResource Margin8}"
+                                AutomationProperties.Name="{x:Static resx:ResUI.TbSetUpstreamProxyDetour}"
                                 Style="{StaticResource DefTextBox}" />
                         </StackPanel>
                     </WrapPanel>
@@ -219,6 +227,7 @@
                             x:Name="sbFullConfigTemplate"
                             Grid.Column="0"
                             VerticalAlignment="Stretch"
+                            AutomationProperties.Name="sing-box config template json"
                             materialDesign:HintAssist.Hint="sing-box config template json"
                             AcceptsReturn="True"
                             BorderThickness="1"
@@ -232,6 +241,7 @@
                             x:Name="sbFullTunConfigTemplate"
                             Grid.Column="2"
                             VerticalAlignment="Stretch"
+                            AutomationProperties.Name="sing-box tun config template json"
                             materialDesign:HintAssist.Hint="sing-box tun config template json"
                             AcceptsReturn="True"
                             BorderThickness="1"

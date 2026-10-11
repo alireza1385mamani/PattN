@@ -38,6 +38,7 @@
                 Grid.Column="1"
                 Width="120"
                 Margin="{StaticResource Margin8}"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsTheme}"
                 Style="{StaticResource DefComboBox}" />
 
             <TextBlock
@@ -52,6 +53,7 @@
                 Grid.Column="1"
                 Width="120"
                 Margin="{StaticResource Margin8}"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsColor}"
                 DisplayMemberPath="Name"
                 Style="{StaticResource DefComboBox}" />
 
@@ -67,6 +69,7 @@
                 Grid.Column="1"
                 Width="120"
                 Margin="{StaticResource Margin8}"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsFontSize}"
                 Style="{StaticResource DefComboBox}" />
 
             <TextBlock
@@ -81,6 +84,7 @@
                 Grid.Column="1"
                 Width="120"
                 Margin="{StaticResource Margin8}"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsLanguage}"
                 DisplayMemberPath="Display"
                 SelectedValuePath="Value"
                 Style="{StaticResource DefComboBox}" />

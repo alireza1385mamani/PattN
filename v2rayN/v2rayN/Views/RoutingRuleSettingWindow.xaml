@@ -24,8 +24,9 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 ClipToBounds="True"
+                KeyboardNavigation.TabNavigation="Continue"
                 Style="{StaticResource MaterialDesignToolBar}">
-                <Button x:Name="menuRuleAdd">
+                <Button x:Name="menuRuleAdd" AutomationProperties.Name="{x:Static resx:ResUI.menuRuleAdd}">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon
                             Margin="{StaticResource MarginRight8}"
@@ -35,7 +36,7 @@
                     </StackPanel>
                 </Button>
                 <Separator />
-                <Button x:Name="menuImportRulesFromFile">
+                <Button x:Name="menuImportRulesFromFile" AutomationProperties.Name="{x:Static resx:ResUI.menuImportRulesFromFile}">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon
                             Margin="{StaticResource MarginRight8}"
@@ -45,7 +46,7 @@
                     </StackPanel>
                 </Button>
                 <Separator />
-                <Button x:Name="menuImportRulesFromClipboard">
+                <Button x:Name="menuImportRulesFromClipboard" AutomationProperties.Name="{x:Static resx:ResUI.menuImportRulesFromClipboard}">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon
                             Margin="{StaticResource MarginRight8}"
@@ -55,7 +56,7 @@
                     </StackPanel>
                 </Button>
                 <Separator />
-                <Button x:Name="menuImportRulesFromUrl">
+                <Button x:Name="menuImportRulesFromUrl" AutomationProperties.Name="{x:Static resx:ResUI.menuImportRulesFromUrl}">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon
                             Margin="{StaticResource MarginRight8}"
@@ -122,6 +123,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     AcceptsReturn="True"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvRemarks}"
                     Style="{StaticResource DefTextBox}"
                     TextWrapping="Wrap" />
 
@@ -136,6 +138,7 @@
                     Margin="{StaticResource Margin4}"
                     HorizontalAlignment="Left"
                     AcceptsReturn="True"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvSort}"
                     Style="{StaticResource DefTextBox}" />
             </StackPanel>
 
@@ -154,6 +157,7 @@
                     x:Name="cmbdomainStrategy"
                     Width="200"
                     Margin="{StaticResource Margin4}"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbdomainStrategy}"
                     Style="{StaticResource DefComboBox}" />
                 <TextBlock
                     Margin="{StaticResource Margin4}"
@@ -164,6 +168,7 @@
                     x:Name="cmbdomainStrategy4Singbox"
                     Width="200"
                     Margin="{StaticResource Margin4}"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbdomainStrategy4Singbox}"
                     Style="{StaticResource DefComboBox}" />
             </StackPanel>
 
@@ -182,6 +187,7 @@
                 Margin="{StaticResource Margin4}"
                 VerticalAlignment="Center"
                 AcceptsReturn="True"
+                AutomationProperties.Name="{x:Static resx:ResUI.LvUrl}"
                 Style="{StaticResource DefTextBox}"
                 TextWrapping="Wrap" />
 
@@ -200,6 +206,7 @@
                 Margin="{StaticResource Margin4}"
                 VerticalAlignment="Center"
                 AcceptsReturn="True"
+                AutomationProperties.Name="{x:Static resx:ResUI.LvCustomIcon}"
                 Style="{StaticResource DefTextBox}"
                 TextWrapping="Wrap" />
             <Button
@@ -229,6 +236,7 @@
                 Margin="{StaticResource Margin4}"
                 VerticalAlignment="Center"
                 AcceptsReturn="True"
+                AutomationProperties.Name="{x:Static resx:ResUI.LvCustomRulesetPath4Singbox}"
                 Style="{StaticResource DefTextBox}"
                 TextWrapping="Wrap" />
             <Button
@@ -245,6 +253,7 @@
                 <DataGrid
                     x:Name="lstRules"
                     AutoGenerateColumns="False"
+                    AutomationProperties.Name="{x:Static resx:ResUI.menuRuleList}"
                     BorderThickness="1"
                     CanUserAddRows="False"
                     CanUserResizeRows="False"
@@ -254,6 +263,11 @@
                     HeadersVisibility="Column"
                     IsReadOnly="True"
                     Style="{StaticResource DefDataGrid}">
+                    <DataGrid.ItemContainerStyle>
+                        <Style BasedOn="{StaticResource MaterialDesignDataGridRow}" TargetType="DataGridRow">
+                            <Setter Property="AutomationProperties.Name" Value="{Binding Remarks}" />
+                        </Style>
+                    </DataGrid.ItemContainerStyle>
                     <DataGrid.ContextMenu>
                         <ContextMenu Style="{StaticResource DefContextMenu}">
                             <MenuItem
@@ -301,7 +315,7 @@
                         <DataGridCheckBoxColumn
                             Width="60"
                             Binding="{Binding Enabled}"
-                            Header="" />
+                            Header="{x:Static resx:ResUI.LvEnabled}" />
                         <DataGridTextColumn
                             Width="150"
                             Binding="{Binding Remarks}"

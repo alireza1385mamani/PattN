@@ -82,6 +82,7 @@
                 </WrapPanel>
                 <DataGrid
                     x:Name="lstProfiles"
+                    AutomationProperties.Name="{x:Static resx:ResUI.menuServers}"
                     materialDesign:DataGridAssist.CellPadding="2,2"
                     AutoGenerateColumns="False"
                     BorderThickness="1"
@@ -101,6 +102,7 @@
                     </DataGrid.InputBindings>
                     <DataGrid.Resources>
                         <Style BasedOn="{StaticResource MaterialDesignDataGridRow}" TargetType="DataGridRow">
+                            <Setter Property="AutomationProperties.Name" Value="{Binding Remarks}" />
                             <EventSetter Event="MouseDoubleClick" Handler="LstProfiles_MouseDoubleClick" />
                         </Style>
                         <Style BasedOn="{StaticResource MaterialDesignDataGridColumnHeader}" TargetType="DataGridColumnHeader">

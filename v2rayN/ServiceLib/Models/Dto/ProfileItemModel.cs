@@ -51,4 +51,6 @@ public partial class ProfileItemModel : ReactiveObject
 
         return summary;
     }
+
+    public override string ToString() => string.IsNullOrWhiteSpace(Remarks) ? GetSummary() : Remarks;
 }

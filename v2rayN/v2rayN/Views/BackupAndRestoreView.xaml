@@ -123,8 +123,10 @@
 
                         <materialDesign:PopupBox
                             HorizontalAlignment="Right"
+                            AutomationProperties.Name="WebDAV"
                             StaysOpen="True"
-                            Style="{StaticResource MaterialDesignToolForegroundPopupBox}">
+                            Style="{StaticResource MaterialDesignToolForegroundPopupBox}"
+                            ToolTip="WebDAV">
                             <StackPanel Margin="{StaticResource Margin8}">
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -152,6 +154,7 @@
                                         Grid.Column="1"
                                         Margin="{StaticResource Margin8}"
                                         VerticalAlignment="Center"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.LvWebDavUrl}"
                                         Style="{StaticResource DefTextBox}"
                                         TextWrapping="Wrap" />
 
@@ -169,6 +172,7 @@
                                         Grid.Column="1"
                                         Margin="{StaticResource Margin8}"
                                         VerticalAlignment="Center"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.LvWebDavUserName}"
                                         Style="{StaticResource DefTextBox}" />
 
                                     <TextBlock
@@ -185,6 +189,7 @@
                                         Grid.Column="1"
                                         Margin="{StaticResource Margin8}"
                                         VerticalAlignment="Center"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.LvWebDavPassword}"
                                         Style="{StaticResource DefTextBox}" />
 
                                     <TextBlock
@@ -201,6 +206,7 @@
                                         Grid.Column="1"
                                         Margin="{StaticResource Margin8}"
                                         VerticalAlignment="Center"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.LvWebDavDirName}"
                                         Style="{StaticResource DefTextBox}" />
 
                                     <Button

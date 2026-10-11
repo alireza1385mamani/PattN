@@ -378,8 +378,10 @@
                             Grid.Row="20"
                             Grid.Column="2"
                             HorizontalAlignment="Left"
+                            AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsEnableFragment}"
                             StaysOpen="True"
-                            Style="{StaticResource MaterialDesignToolForegroundPopupBox}">
+                            Style="{StaticResource MaterialDesignToolForegroundPopupBox}"
+                            ToolTip="{x:Static resx:ResUI.TbSettingsEnableFragment}">
                             <StackPanel Margin="{StaticResource Margin8}">
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -409,7 +411,8 @@
                                         Grid.Column="1"
                                         Width="200"
                                         Margin="{StaticResource Margin8}"
-                                        VerticalAlignment="Center" />
+                                        VerticalAlignment="Center"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsFragmentPackets}" />
 
                                     <TextBlock
                                         Grid.Row="1"
@@ -426,6 +429,7 @@
                                         Width="200"
                                         Margin="{StaticResource Margin8}"
                                         VerticalAlignment="Center"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsFragmentLength}"
                                         materialDesign:HintAssist.Hint="50-100"
                                         Style="{StaticResource DefTextBox}" />
 
@@ -444,6 +448,7 @@
                                         Width="200"
                                         Margin="{StaticResource Margin8}"
                                         VerticalAlignment="Center"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsFragmentInterval}"
                                         materialDesign:HintAssist.Hint="10-20"
                                         Style="{StaticResource DefTextBox}" />
 
@@ -462,6 +467,7 @@
                                         Width="200"
                                         Margin="{StaticResource Margin8}"
                                         VerticalAlignment="Center"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsFragmentMaxSplit}"
                                         materialDesign:HintAssist.Hint="0"
                                         Style="{StaticResource DefTextBox}" />
                                 </Grid>
@@ -548,8 +554,10 @@
                             Grid.Row="24"
                             Grid.Column="1"
                             HorizontalAlignment="Left"
+                            AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsMux4Ray}"
                             StaysOpen="True"
-                            Style="{StaticResource MaterialDesignToolForegroundPopupBox}">
+                            Style="{StaticResource MaterialDesignToolForegroundPopupBox}"
+                            ToolTip="{x:Static resx:ResUI.TbSettingsMux4Ray}">
                             <StackPanel Margin="{StaticResource Margin8}">
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -576,6 +584,7 @@
                                         Grid.Column="1"
                                         Width="200"
                                         Margin="{StaticResource Margin8}"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsMux4RayConcurrency}"
                                         Style="{StaticResource DefTextBox}" />
 
                                     <TextBlock
@@ -592,6 +601,7 @@
                                         Grid.Column="1"
                                         Width="200"
                                         Margin="{StaticResource Margin8}"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsMux4RayXudpConcurrency}"
                                         Style="{StaticResource DefTextBox}" />
 
                                     <TextBlock
@@ -608,6 +618,7 @@
                                         Grid.Column="1"
                                         Width="200"
                                         Margin="{StaticResource Margin8}"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsMux4RayXudpProxyUDP443}"
                                         Style="{StaticResource DefComboBox}" />
                                 </Grid>
                             </StackPanel>

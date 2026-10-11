@@ -97,6 +97,7 @@
                     Margin="{StaticResource Margin4}"
                     VerticalAlignment="Center"
                     AcceptsReturn="True"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvRemarks}"
                     Style="{StaticResource MyOutlinedTextBox}"
                     TextWrapping="Wrap" />
 
@@ -113,6 +114,7 @@
                     Grid.Column="1"
                     Margin="{StaticResource Margin4}"
                     VerticalAlignment="Center"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvUrl}"
                     materialDesign:HintAssist.Hint="{x:Static resx:ResUI.SubUrlTips}"
                     AcceptsReturn="True"
                     Style="{StaticResource MyOutlinedTextBox}"
@@ -122,8 +124,10 @@
                     Grid.Row="2"
                     Grid.Column="2"
                     HorizontalAlignment="Left"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvMoreUrl}"
                     StaysOpen="True"
-                    Style="{StaticResource MaterialDesignToolForegroundPopupBox}">
+                    Style="{StaticResource MaterialDesignToolForegroundPopupBox}"
+                    ToolTip="{x:Static resx:ResUI.LvMoreUrl}">
                     <StackPanel>
                         <TextBlock
                             Margin="{StaticResource Margin4}"
@@ -135,6 +139,7 @@
                             Width="400"
                             Margin="{StaticResource Margin4}"
                             VerticalAlignment="Center"
+                            AutomationProperties.Name="{x:Static resx:ResUI.LvMoreUrl}"
                             materialDesign:HintAssist.Hint="{x:Static resx:ResUI.SubUrlTips}"
                             AcceptsReturn="True"
                             MinLines="4"
@@ -159,6 +164,7 @@
                         x:Name="togEnable"
                         Margin="{StaticResource Margin4}"
                         HorizontalAlignment="Left"
+                        AutomationProperties.Name="{x:Static resx:ResUI.LvEnabled}"
                         DockPanel.Dock="Left" />
 
                     <TextBox
@@ -166,6 +172,7 @@
                         Width="100"
                         Margin="{StaticResource Margin4}"
                         VerticalAlignment="Center"
+                        AutomationProperties.Name="{x:Static resx:ResUI.LvAutoUpdateInterval}"
                         materialDesign:HintAssist.Hint="{x:Static resx:ResUI.SubUrlTips}"
                         AcceptsReturn="True"
                         DockPanel.Dock="Right"
@@ -193,6 +200,7 @@
                     Grid.Column="1"
                     Margin="{StaticResource Margin4}"
                     VerticalAlignment="Center"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvFilter}"
                     materialDesign:HintAssist.Hint="{x:Static resx:ResUI.SubUrlTips}"
                     AcceptsReturn="True"
                     Style="{StaticResource MyOutlinedTextBox}" />
@@ -210,6 +218,7 @@
                     Grid.Column="1"
                     Margin="{StaticResource Margin4}"
                     VerticalAlignment="Center"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvOverrideAddress}"
                     materialDesign:HintAssist.Hint="{x:Static resx:ResUI.TipOverrideAddress}"
                     Style="{StaticResource MyOutlinedTextBox}"
                     ToolTip="{x:Static resx:ResUI.TipOverrideAddress}" />
@@ -228,6 +237,7 @@
                     Width="200"
                     Margin="{StaticResource Margin4}"
                     HorizontalAlignment="Left"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvOverridePort}"
                     materialDesign:HintAssist.Hint="{x:Static resx:ResUI.TipOverridePort}"
                     Style="{StaticResource MyOutlinedTextBox}"
                     ToolTip="{x:Static resx:ResUI.TipOverridePort}" />
@@ -244,6 +254,7 @@
                     Grid.Row="8"
                     Grid.Column="1"
                     Margin="{StaticResource Margin4}"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvConvertTarget}"
                     materialDesign:HintAssist.Hint="{x:Static resx:ResUI.LvConvertTargetTip}"
                     MaxDropDownHeight="1000"
                     Style="{StaticResource MyOutlinedTextComboBox}" />
@@ -260,6 +271,7 @@
                     Grid.Column="1"
                     Margin="{StaticResource Margin4}"
                     VerticalAlignment="Center"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvUserAgent}"
                     materialDesign:HintAssist.Hint="{x:Static resx:ResUI.SubUrlTips}"
                     AcceptsReturn="True"
                     Style="{StaticResource MyOutlinedTextBox}"
@@ -276,6 +288,7 @@
                         x:Name="txtRequestHeaders"
                         Margin="{StaticResource Margin4}"
                         AcceptsReturn="True"
+                        AutomationProperties.Name="{x:Static resx:ResUI.LvRequestHeaders}"
                         MinLines="4"
                         MaxLines="8"
                         Style="{StaticResource MyOutlinedTextBox}"
@@ -303,6 +316,7 @@
                     HorizontalAlignment="Left"
                     VerticalAlignment="Center"
                     AcceptsReturn="True"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvSort}"
                     Style="{StaticResource MyOutlinedTextBox}" />
 
                 <TextBlock
@@ -318,6 +332,7 @@
                     Grid.Column="1"
                     Margin="{StaticResource Margin4}"
                     VerticalAlignment="Center"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvPrevProfile}"
                     materialDesign:HintAssist.Hint="{x:Static resx:ResUI.LvPrevProfileTip}"
                     AcceptsReturn="True"
                     Style="{StaticResource MyOutlinedTextBox}"
@@ -344,6 +359,7 @@
                     Grid.Column="1"
                     Margin="{StaticResource Margin4}"
                     VerticalAlignment="Center"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvNextProfile}"
                     materialDesign:HintAssist.Hint="{x:Static resx:ResUI.LvPrevProfileTip}"
                     AcceptsReturn="True"
                     Style="{StaticResource MyOutlinedTextBox}"
@@ -369,6 +385,7 @@
                     Grid.Row="14"
                     Grid.Column="1"
                     Margin="{StaticResource Margin4}"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvCustomCoreType}"
                     MaxDropDownHeight="1000"
                     Style="{StaticResource MyOutlinedTextComboBox}" />
 
@@ -385,6 +402,7 @@
                     Grid.Column="1"
                     Margin="{StaticResource Margin4}"
                     HorizontalAlignment="Left"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbPreSocksPort4Sub}"
                     materialDesign:HintAssist.Hint="{x:Static resx:ResUI.TipPreSocksPort}"
                     AcceptsReturn="True"
                     Style="{StaticResource MyOutlinedTextBox}"
@@ -404,6 +422,7 @@
                     Margin="{StaticResource Margin4}"
                     VerticalAlignment="Center"
                     AcceptsReturn="True"
+                    AutomationProperties.Name="{x:Static resx:ResUI.LvMemo}"
                     Style="{StaticResource MyOutlinedTextBox}"
                     TextWrapping="Wrap" />
             </Grid>

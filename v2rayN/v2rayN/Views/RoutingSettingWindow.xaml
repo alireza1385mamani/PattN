@@ -29,8 +29,9 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 ClipToBounds="True"
+                KeyboardNavigation.TabNavigation="Continue"
                 Style="{StaticResource MaterialDesignToolBar}">
-                <Button x:Name="menuRoutingAdvancedAdd2">
+                <Button x:Name="menuRoutingAdvancedAdd2" AutomationProperties.Name="{x:Static resx:ResUI.menuRoutingAdvancedAdd}">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon
                             Margin="{StaticResource MarginRight8}"
@@ -40,7 +41,7 @@
                     </StackPanel>
                 </Button>
                 <Separator />
-                <Button x:Name="menuRoutingAdvancedImportRules2">
+                <Button x:Name="menuRoutingAdvancedImportRules2" AutomationProperties.Name="{x:Static resx:ResUI.menuRoutingAdvancedImportRules}">
                     <StackPanel Orientation="Horizontal">
                         <materialDesign:PackIcon
                             Margin="{StaticResource MarginRight8}"
@@ -79,6 +80,7 @@
                 Grid.Column="1"
                 Width="300"
                 Margin="{StaticResource Margin4}"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbdomainStrategy}"
                 Style="{StaticResource DefComboBox}" />
 
             <TextBlock
@@ -98,6 +100,7 @@
                 Grid.Column="1"
                 Width="300"
                 Margin="{StaticResource Margin4}"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbdomainStrategy4Singbox}"
                 Style="{StaticResource DefComboBox}" />
         </Grid>
 
@@ -105,6 +108,7 @@
             <TabItem HorizontalAlignment="Left" Header="{x:Static resx:ResUI.TbRoutingTabRuleList}">
                 <DataGrid
                     x:Name="lstRoutings"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbRoutingTabRuleList}"
                     AutoGenerateColumns="False"
                     BorderThickness="1"
                     CanUserAddRows="False"
@@ -144,6 +148,9 @@
                         </ContextMenu>
                     </DataGrid.ContextMenu>
                     <DataGrid.Resources>
+                        <Style BasedOn="{StaticResource MaterialDesignDataGridRow}" TargetType="DataGridRow">
+                            <Setter Property="AutomationProperties.Name" Value="{Binding Remarks}" />
+                        </Style>
                         <Style BasedOn="{StaticResource MaterialDesignDataGridCell}" TargetType="DataGridCell">
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding IsActive}" Value="True">

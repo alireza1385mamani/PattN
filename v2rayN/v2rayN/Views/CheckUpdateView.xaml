@@ -32,7 +32,8 @@
             <ToggleButton
                 x:Name="togEnableUpdateViaProxy"
                 Margin="{StaticResource Margin8}"
-                HorizontalAlignment="Left" />
+                HorizontalAlignment="Left"
+                AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsEnableUpdateViaProxy}" />
 
             <Button
                 x:Name="btnCheckOnly"
@@ -53,6 +54,7 @@
         <StackPanel>
             <ListView
                 x:Name="lstCheckUpdates"
+                AutomationProperties.Name="{x:Static resx:ResUI.menuCheckUpdate}"
                 BorderThickness="1"
                 ItemContainerStyle="{StaticResource lvItemSelected}">
                 <ListView.ItemsPanel>
@@ -83,6 +85,7 @@
                                     Margin="{StaticResource Margin8}"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Center"
+                                    AutomationProperties.Name="{Binding CoreTypeDisplay}"
                                     IsChecked="{Binding IsSelected}" />
 
                                 <DockPanel
@@ -93,6 +96,7 @@
                                         Margin="{StaticResource Margin4}"
                                         HorizontalAlignment="Left"
                                         VerticalAlignment="Center"
+                                        AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsEnableCheckPreReleaseUpdate}"
                                         IsChecked="{Binding IsCheckPreRelease}" />
                                     <TextBlock
                                         Margin="{StaticResource Margin4}"

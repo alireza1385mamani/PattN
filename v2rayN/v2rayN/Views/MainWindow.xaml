@@ -322,6 +322,8 @@
                         <materialDesign:PopupBox
                             Padding="-2"
                             HorizontalAlignment="Right"
+                            AutomationProperties.Name="{x:Static resx:ResUI.TbSettingsTheme}"
+                            ToolTip="{x:Static resx:ResUI.TbSettingsTheme}"
                             StaysOpen="True"
                             Style="{StaticResource MaterialDesignToolForegroundPopupBox}">
                             <ContentControl x:Name="pbTheme" />
@@ -370,7 +372,7 @@
                             materialDesign:NavigationRailAssist.ShowSelectionBackground="True"
                             Style="{StaticResource MaterialDesignNavigationRailTabControl}"
                             TabStripPlacement="Left">
-                            <TabItem x:Name="tabMsgView1">
+                            <TabItem x:Name="tabMsgView1" AutomationProperties.Name="{x:Static resx:ResUI.MsgInformationTitle}">
                                 <TabItem.Header>
                                     <StackPanel>
                                         <materialDesign:PackIcon HorizontalAlignment="Center" Kind="MessageTextOutline" />
@@ -381,7 +383,7 @@
                                     </StackPanel>
                                 </TabItem.Header>
                             </TabItem>
-                            <TabItem x:Name="tabClashProxies1">
+                            <TabItem x:Name="tabClashProxies1" AutomationProperties.Name="{x:Static resx:ResUI.TbProxies}">
                                 <TabItem.Header>
                                     <StackPanel>
                                         <materialDesign:PackIcon HorizontalAlignment="Center" Kind="ArrowDecisionOutline" />
@@ -392,7 +394,7 @@
                                     </StackPanel>
                                 </TabItem.Header>
                             </TabItem>
-                            <TabItem x:Name="tabClashConnections1">
+                            <TabItem x:Name="tabClashConnections1" AutomationProperties.Name="{x:Static resx:ResUI.TbConnections}">
                                 <TabItem.Header>
                                     <StackPanel>
                                         <materialDesign:PackIcon HorizontalAlignment="Center" Kind="LanConnect" />
@@ -411,7 +413,7 @@
                             materialDesign:NavigationRailAssist.ShowSelectionBackground="True"
                             Style="{StaticResource MaterialDesignNavigationRailTabControl}"
                             TabStripPlacement="Left">
-                            <TabItem x:Name="tabProfiles2">
+                            <TabItem x:Name="tabProfiles2" AutomationProperties.Name="{x:Static resx:ResUI.menuServers}">
                                 <TabItem.Header>
                                     <StackPanel>
                                         <materialDesign:PackIcon HorizontalAlignment="Center" Kind="Server" />
@@ -422,7 +424,7 @@
                                     </StackPanel>
                                 </TabItem.Header>
                             </TabItem>
-                            <TabItem x:Name="tabMsgView2">
+                            <TabItem x:Name="tabMsgView2" AutomationProperties.Name="{x:Static resx:ResUI.MsgInformationTitle}">
                                 <TabItem.Header>
                                     <StackPanel>
                                         <materialDesign:PackIcon HorizontalAlignment="Center" Kind="MessageTextOutline" />
@@ -433,7 +435,7 @@
                                     </StackPanel>
                                 </TabItem.Header>
                             </TabItem>
-                            <TabItem x:Name="tabClashProxies2">
+                            <TabItem x:Name="tabClashProxies2" AutomationProperties.Name="{x:Static resx:ResUI.TbProxies}">
                                 <TabItem.Header>
                                     <StackPanel>
                                         <materialDesign:PackIcon HorizontalAlignment="Center" Kind="ArrowDecisionOutline" />
@@ -444,7 +446,7 @@
                                     </StackPanel>
                                 </TabItem.Header>
                             </TabItem>
-                            <TabItem x:Name="tabClashConnections2">
+                            <TabItem x:Name="tabClashConnections2" AutomationProperties.Name="{x:Static resx:ResUI.TbConnections}">
                                 <TabItem.Header>
                                     <StackPanel>
                                         <materialDesign:PackIcon HorizontalAlignment="Center" Kind="LanConnect" />

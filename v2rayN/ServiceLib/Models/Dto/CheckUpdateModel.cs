@@ -12,4 +12,6 @@ public partial class CheckUpdateModel : ReactiveObject
     public bool IsGeoFile { get; set; }
     public string CoreTypeForStorage => IsGeoFile ? "GeoFiles" : (CoreType?.ToString() ?? "");
     public string CoreTypeDisplay => CoreType == ECoreType.v2rayN ? Global.AppName : CoreTypeForStorage;
+
+    public override string ToString() => $"{CoreTypeDisplay} {Remarks}".Trim();
 }

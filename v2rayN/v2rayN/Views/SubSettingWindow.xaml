@@ -29,8 +29,9 @@
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     ClipToBounds="True"
+                    KeyboardNavigation.TabNavigation="Continue"
                     Style="{StaticResource MaterialDesignToolBar}">
-                    <Button x:Name="menuSubAdd">
+                    <Button x:Name="menuSubAdd" AutomationProperties.Name="{x:Static resx:ResUI.menuSubAdd}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon
                                 Margin="{StaticResource MarginRight8}"
@@ -40,7 +41,7 @@
                         </StackPanel>
                     </Button>
                     <Separator />
-                    <Button x:Name="menuSubDelete">
+                    <Button x:Name="menuSubDelete" AutomationProperties.Name="{x:Static resx:ResUI.menuSubDelete}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon
                                 Margin="{StaticResource MarginRight8}"
@@ -50,7 +51,7 @@
                         </StackPanel>
                     </Button>
                     <Separator />
-                    <Button x:Name="menuSubEdit">
+                    <Button x:Name="menuSubEdit" AutomationProperties.Name="{x:Static resx:ResUI.menuSubEdit}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon
                                 Margin="{StaticResource MarginRight8}"
@@ -60,7 +61,7 @@
                         </StackPanel>
                     </Button>
                     <Separator />
-                    <Button x:Name="menuSubShare">
+                    <Button x:Name="menuSubShare" AutomationProperties.Name="{x:Static resx:ResUI.menuSubShare}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon
                                 Margin="{StaticResource MarginRight8}"
@@ -69,7 +70,7 @@
                             <TextBlock Style="{StaticResource ToolbarTextBlock}" Text="{x:Static resx:ResUI.menuSubShare}" />
                         </StackPanel>
                     </Button>
-                    <Button x:Name="menuClose" IsCancel="True">
+                    <Button x:Name="menuClose" IsCancel="True" AutomationProperties.Name="{x:Static resx:ResUI.menuClose}">
                         <StackPanel Orientation="Horizontal">
                             <materialDesign:PackIcon
                                 Margin="{StaticResource MarginRight8}"
@@ -83,6 +84,7 @@
 
             <DataGrid
                 x:Name="lstSubscription"
+                AutomationProperties.Name="{x:Static resx:ResUI.menuSubscription}"
                 AutoGenerateColumns="False"
                 BorderThickness="1"
                 CanUserAddRows="False"
@@ -93,6 +95,11 @@
                 HeadersVisibility="Column"
                 IsReadOnly="True"
                 Style="{StaticResource DefDataGrid}">
+                <DataGrid.Resources>
+                    <Style BasedOn="{StaticResource MaterialDesignDataGridRow}" TargetType="DataGridRow">
+                        <Setter Property="AutomationProperties.Name" Value="{Binding Remarks}" />
+                    </Style>
+                </DataGrid.Resources>
                 <DataGrid.ContextMenu>
                     <ContextMenu Style="{StaticResource DefContextMenu}">
                         <MenuItem

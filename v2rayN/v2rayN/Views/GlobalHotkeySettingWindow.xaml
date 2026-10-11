@@ -89,6 +89,7 @@
                         Margin="{StaticResource Margin4}"
                         VerticalAlignment="Center"
                         AcceptsReturn="True"
+                        AutomationProperties.Name="{x:Static resx:ResUI.TbDisplayGUI}"
                         IsReadOnly="True"
                         Style="{StaticResource MyOutlinedTextBox}" />
 
@@ -106,6 +107,7 @@
                         Margin="{StaticResource Margin4}"
                         VerticalAlignment="Center"
                         AcceptsReturn="True"
+                        AutomationProperties.Name="{x:Static resx:ResUI.TbClearSystemProxy}"
                         IsReadOnly="True"
                         Style="{StaticResource MyOutlinedTextBox}" />
 
@@ -123,6 +125,7 @@
                         Margin="{StaticResource Margin4}"
                         VerticalAlignment="Center"
                         AcceptsReturn="True"
+                        AutomationProperties.Name="{x:Static resx:ResUI.TbSetSystemProxy}"
                         IsReadOnly="True"
                         Style="{StaticResource MyOutlinedTextBox}" />
                     <TextBlock
@@ -139,6 +142,7 @@
                         Margin="{StaticResource Margin4}"
                         VerticalAlignment="Center"
                         AcceptsReturn="True"
+                        AutomationProperties.Name="{x:Static resx:ResUI.TbNotChangeSystemProxy}"
                         IsReadOnly="True"
                         Style="{StaticResource MyOutlinedTextBox}" />
                     <TextBlock
@@ -155,6 +159,7 @@
                         Margin="{StaticResource Margin4}"
                         VerticalAlignment="Center"
                         AcceptsReturn="True"
+                        AutomationProperties.Name="{x:Static resx:ResUI.TbSystemProxyPac}"
                         IsReadOnly="True"
                         Style="{StaticResource MyOutlinedTextBox}" />
                 </Grid>

@@ -82,6 +82,7 @@
                     Margin="{StaticResource Margin4}"
                     VerticalAlignment="Center"
                     AcceptsReturn="True"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbRemarks}"
                     Style="{StaticResource MyOutlinedTextBox}" />
 
                 <TextBlock
@@ -99,6 +100,7 @@
                     Margin="{StaticResource Margin4}"
                     VerticalAlignment="Center"
                     AcceptsReturn="True"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbAddress}"
                     IsReadOnly="True"
                     Style="{StaticResource MyOutlinedTextBox}" />
                 <StackPanel
@@ -132,6 +134,7 @@
                     Width="200"
                     Margin="{StaticResource Margin4}"
                     HorizontalAlignment="Left"
+                    AutomationProperties.Name="{x:Static resx:ResUI.TbCoreType}"
                     MaxDropDownHeight="1000"
                     Style="{StaticResource MyOutlinedTextComboBox}" />
 
@@ -170,7 +173,10 @@
                         Grid.Column="1"
                         Margin="{StaticResource Margin4}"
                         Orientation="Horizontal">
-                        <ToggleButton x:Name="togDisplayLog" HorizontalAlignment="Left" />
+                        <ToggleButton
+                            x:Name="togDisplayLog"
+                            HorizontalAlignment="Left"
+                            AutomationProperties.Name="{x:Static resx:ResUI.TbDisplayLog}" />
                         <TextBlock
                             Margin="{StaticResource MarginLeftRight8}"
                             VerticalAlignment="Center"
@@ -193,6 +199,7 @@
                         Margin="{StaticResource Margin4}"
                         HorizontalAlignment="Left"
                         AcceptsReturn="True"
+                        AutomationProperties.Name="{x:Static resx:ResUI.TbPreSocksPort}"
                         Style="{StaticResource MyOutlinedTextBox}" />
                     <StackPanel
                         Grid.Row="2"
@@ -243,7 +250,8 @@
                         Grid.Row="0"
                         Grid.Column="1"
                         Margin="{StaticResource Margin4}"
-                        HorizontalAlignment="Left" />
+                        HorizontalAlignment="Left"
+                        AutomationProperties.Name="Sing-Box Endpoint" />
 
                     <TextBlock
                         Grid.Row="1"

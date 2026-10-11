@@ -18,4 +18,6 @@ public class RoutingItem
     public string DomainStrategy4Singbox { get; set; }
     public int Sort { get; set; }
     public bool IsActive { get; set; }
+
+    public override string ToString() => Remarks ?? string.Empty;
 }

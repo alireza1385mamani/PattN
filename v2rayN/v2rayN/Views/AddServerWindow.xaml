@@ -557,8 +557,10 @@
                         Grid.Column="2"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
+                        AutomationProperties.Name="{x:Static resx:ResUI.TbPath7}"
                         StaysOpen="True"
-                        Style="{StaticResource MaterialDesignToolForegroundPopupBox}">
+                        Style="{StaticResource MaterialDesignToolForegroundPopupBox}"
+                        ToolTip="{x:Static resx:ResUI.TbPath7}">
                         <StackPanel>
                             <TextBlock
                                 Margin="{StaticResource Margin4}"
@@ -1488,13 +1490,16 @@
                         Grid.Column="1"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
+                        AutomationProperties.Name="{x:Static resx:ResUI.TbFinalmask}"
                         StaysOpen="True"
-                        Style="{StaticResource MaterialDesignToolForegroundPopupBox}">
+                        Style="{StaticResource MaterialDesignToolForegroundPopupBox}"
+                        ToolTip="{x:Static resx:ResUI.TbFinalmask}">
                         <StackPanel>
                             <TextBox
                                 x:Name="txtFinalmask"
                                 Width="400"
                                 Margin="{StaticResource Margin4}"
+                                AutomationProperties.Name="{x:Static resx:ResUI.TbFinalmask}"
                                 AcceptsReturn="True"
                                 HorizontalScrollBarVisibility="Auto"
                                 MaxLines="8"
@@ -1699,13 +1704,16 @@
                         Grid.Column="1"
                         HorizontalAlignment="Left"
                         VerticalAlignment="Center"
+                        AutomationProperties.Name="{x:Static resx:ResUI.TbEchOutbound}"
                         StaysOpen="True"
-                        Style="{StaticResource MaterialDesignToolForegroundPopupBox}">
+                        Style="{StaticResource MaterialDesignToolForegroundPopupBox}"
+                        ToolTip="{x:Static resx:ResUI.TbEchOutbound}">
                         <StackPanel>
                             <TextBox
                                 x:Name="txtEchOutbound"
                                 Width="400"
                                 Margin="{StaticResource Margin4}"
+                                AutomationProperties.Name="{x:Static resx:ResUI.TbEchOutbound}"
                                 AcceptsReturn="True"
                                 HorizontalScrollBarVisibility="Auto"
                                 MaxLines="8"
@@ -1752,8 +1760,10 @@
                         <materialDesign:PopupBox
                             HorizontalAlignment="Left"
                             VerticalAlignment="Center"
+                            AutomationProperties.Name="{x:Static resx:ResUI.TbCertPinning}"
                             StaysOpen="True"
-                            Style="{StaticResource MaterialDesignToolForegroundPopupBox}">
+                            Style="{StaticResource MaterialDesignToolForegroundPopupBox}"
+                            ToolTip="{x:Static resx:ResUI.TbCertPinning}">
                             <StackPanel>
                                 <TextBlock
                                     Width="400"
@@ -1788,6 +1798,7 @@
                                     Width="400"
                                     Margin="{StaticResource Margin4}"
                                     HorizontalAlignment="Left"
+                                    AutomationProperties.Name="{x:Static resx:ResUI.TbCertSha256Tips}"
                                     Style="{StaticResource DefTextBox}" />
                                 <TextBlock
                                     Width="400"
@@ -1800,6 +1811,7 @@
                                     x:Name="txtCert"
                                     Width="400"
                                     Margin="{StaticResource Margin4}"
+                                    AutomationProperties.Name="{x:Static resx:ResUI.TbFullCertTips}"
                                     AcceptsReturn="True"
                                     HorizontalScrollBarVisibility="Auto"
                                     MaxLines="18"
